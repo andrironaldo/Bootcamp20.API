@@ -33,6 +33,7 @@ namespace Bootcamp20.API.DataAccess.Models
         public void Update(ItemParam itemparam)
         {
             this.Name = itemparam.Name;
+            this.Supplier = itemparam.Supplier;
             this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
         }
     }

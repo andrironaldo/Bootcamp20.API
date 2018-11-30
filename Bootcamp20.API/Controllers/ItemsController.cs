@@ -69,16 +69,16 @@ namespace Bootcamp20.API.Controllers
         // PUT: api/Suppliers/5
         [HttpPut]
         //public void Put(int id, Supplier supplier)//Nama Bebas, tapi buat httpPut
-        public void Put(SupplierParam supplierparam)
+        public void Put(ItemParam itemparam)
         {
-            _Supplier.Update(supplierparam);
+            _Item.Update(itemparam);
         }
 
         // DELETE: api/Suppliers/5
         [HttpDelete]
         public void Delete(int id)
         {
-            _Supplier.Delete(id);
+            _Item.Delete(id);
         }
     }
 }

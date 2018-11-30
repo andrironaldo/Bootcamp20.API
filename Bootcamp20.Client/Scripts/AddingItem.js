@@ -77,7 +77,7 @@ function getById(id) {
         type: 'get',
         dataType: 'json',
         success: function (item) {
-
+            debugger;
             $.ajax({
                 type: 'get',
                 url: 'http://localhost:4937/api/Suppliers/',
@@ -143,22 +143,24 @@ function savetampil() {
 }
 
 function Edit() {
-    var supplier = new Object();
-    supplier.id = $('#Id').val();
-    supplier.name = $('#Name').val();
-    if (supplier.name == "") {
+    debugger;
+    var item = new Object();
+    item.id = $('#Id').val();
+    item.name = $('#Name').val();
+    item.supplier_id = $('#combosuppliers').val();
+    if (item.name == "") {
         swal("Invalid", "Harap Mengisi Form", "warning");
         return false;
     }
-    else if (supplier.name == $('#NameOld').val()) {
+    else if (item.name == $('#NameOld').val()) {
         swal("Invalid", "Harap Data Tidak Boleh Sama", "warning");
         return false;
     }
     else {
         $.ajax({
-            url: 'http://localhost:4937/api/Suppliers/' + supplier.id,
+            url: 'http://localhost:4937/api/Items/' + item.id,
             type: 'PUT',
-            data: supplier,
+            data: item,
             dataType: 'json',
             success: function (data) {
                 tampil();
@@ -188,7 +190,7 @@ function deleting(id) {
             function (isConfirm) {
                 if (isConfirm) {
                     $.ajax({
-                        url: 'http://localhost:4937/api/Suppliers/' + id,
+                        url: 'http://localhost:4937/api/Items/' + id,
                         type: 'delete',
                         success: function (data) {
                             tampil();
@@ -228,30 +230,3 @@ $('#Save').click(function () {
         });
     }
 });
-
-function carisupplier() {
-    var supplier = new Object();
-    supplier.name = $('#cari').val();
-    $.ajax({
-        type: 'get',
-        url: 'http://localhost:4937/api/Suppliers',
-        dataType: 'JSON',
-        success: function (data) {
-            var html = '';
-            var i, k;
-            for (i = 0; i < data.length; i++) {
-                k = i + 1;
-                html += '<tr>' +
-                        '<td>' + k + '</td>' +
-                        '<td>' + data[i].Name + '</td>' +
-                        '<td>' + data[i].IsDelete + '</td>' +
-                        '<td><a onclick="return getById(' + data[i].Id + ')">Edit</a> | <a onclick="return deleting(' + data[i].Id + ')">Delete</a></td>' +
-                        '</tr>';
-            }
-            $('#LoadData').html(html);
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            alert('Terjadi Kesalahan, coba lagi!');
-        }
-    });
-}

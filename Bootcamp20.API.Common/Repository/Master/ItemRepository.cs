@@ -61,6 +61,7 @@ namespace Bootcamp20.API.Common.Repository.Master
 
         public bool Update(ItemParam _itemparam)
         {
+            _itemparam.Supplier = _context.Suppliers.Find(_itemparam.Supplier_Id);
             Item getItem = Get(_itemparam.Id);
             getItem.Update(_itemparam);
             _context.Entry(getItem).State = EntityState.Modified;
