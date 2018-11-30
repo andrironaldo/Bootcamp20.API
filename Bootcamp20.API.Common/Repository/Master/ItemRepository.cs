@@ -75,8 +75,4 @@ namespace Bootcamp20.API.Common.Repository.Master
             }
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> b1b5915b8a0484055a5f27bfa9f60cf335408d35
