@@ -31,7 +31,7 @@ namespace Bootcamp20.API.Common.Repository.Master
 
         public List<Item> Get()
         {
-            return _context.Items.ToList();
+            return _context.Items.Include("Supplier").ToList();
         }
         public List<Item> GetName(string name)
         {
@@ -45,7 +45,8 @@ namespace Bootcamp20.API.Common.Repository.Master
 
         public bool Insert(ItemParam _itemparam)
         {
-            Item setItem = new Item(_itemparam);
+            _itemparam.Supplier = _context.Suppliers.Find(_itemparam.Supplier_Id);
+            Item setItem = new Item(_itemparam);            
             _context.Items.Add(setItem);
             status = _context.SaveChanges();
             if (status > 0)
@@ -74,5 +75,4 @@ namespace Bootcamp20.API.Common.Repository.Master
             }
         }
     }
-}
 }

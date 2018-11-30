@@ -15,7 +15,9 @@ namespace Bootcamp20.API.DataAccess.Params
         public DateTime UpdateDate { get; set; }
         public DateTime DeleteDate { get; set; }
         public bool IsDelete { get; set; }
-        public Supplier Supplier { get;set } 
+        public Supplier Supplier { get; set; } 
+        public int Supplier_Id { get; set; }
+        public string Supplier_Name { get; set; }
         public ItemParam() { }
         public ItemParam(Item item)
         {
@@ -24,7 +26,7 @@ namespace Bootcamp20.API.DataAccess.Params
             this.CreateDate = Convert.ToDateTime(item.CreateDate);
             this.UpdateDate = Convert.ToDateTime(item.UpdateDate);
             this.IsDelete = Convert.ToBoolean(item.IsDelete);
-            this.Supplier = item.Supplier;
+            this.Supplier_Id = item.Supplier.Id;
         }
     }
 }

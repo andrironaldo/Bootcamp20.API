@@ -30,7 +30,7 @@ namespace Bootcamp20.API.Controllers
             {
                 Id = x.Id,
                 Name = x.Name.ToString(),
-                Supplier=x.Supplier,
+                Supplier_Name=x.Supplier.Name,
                 IsDelete = Convert.ToBoolean(x.IsDelete)
             });
             return Json(list_param);
@@ -43,7 +43,7 @@ namespace Bootcamp20.API.Controllers
             {
                 Id = x.Id,
                 Name = x.Name.ToString(),
-                Supplier=x.Supplier,
+                Supplier_Id = x.Supplier.Id,
                 IsDelete = Convert.ToBoolean(x.IsDelete)
             });
             return Json(list_param);
@@ -61,9 +61,9 @@ namespace Bootcamp20.API.Controllers
 
         // POST: api/Suppliers
         [HttpPost]
-        public void Post(SupplierParam supplierparam)
+        public void Post(ItemParam itemparam)
         {
-            _Supplier.Insert(supplierparam);
+            _Item.Insert(itemparam);
         }
 
         // PUT: api/Suppliers/5

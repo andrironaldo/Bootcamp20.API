@@ -7,7 +7,7 @@
 
 <p>
     <form>
-        <input type="text" placeholder="Cari Nama Supplier" id="cari" />
+        <input type="text" placeholder="Cari Nama Item" id="cari" />
     </form>
     <button onclick="cari()" class="btn pull-left hidden-sm-down btn-info"><i class="mdi mdi-plus-circle"></i> Search</button>
     <button data-toggle="modal" onclick="savetampil()" data-target="#myModal" class="btn pull-right hidden-sm-down btn-success"><i class="mdi mdi-plus-circle"></i> Create</button>
@@ -20,6 +20,9 @@
             </th>
             <th>
                 Nama Item
+            </th>
+            <th>
+                Nama Supplier
             </th>
             <th>
                 Keterangan Delete
@@ -51,6 +54,9 @@
                         <input type="text" class="form-control" id="Name" placeholder="Name" />
                         <input type="hidden" class="form-control" id="NameOld" />
                     </div>
+                    <div class="form-group">
+                        <div id="Combobox"></div>
+                    </div>
                 </form>
             </div>
             <div class="modal-footer">
@@ -66,6 +72,6 @@
 @section Scripts{
     <script src="~/Content/sweetalert/sweetalert.min.js"></script>
     <link href="~/Content/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
-    <script src="~/Scripts/AddingSupplier.js"></script>
+    <script src="~/Scripts/AddingItem.js"></script>
     @Scripts.Render("~/bundles/jqueryval")
 }
