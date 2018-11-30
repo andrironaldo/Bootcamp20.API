@@ -42,3 +42,47 @@ C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.Client\obj\Debug\Bootcamp20.Client.csprojResolveAssemblyReference.cache
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.Client\obj\Debug\Bootcamp20.Client.dll
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.Client\obj\Debug\Bootcamp20.Client.pdb
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\roslyn\csc.exe
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\roslyn\System.Collections.Immutable.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\roslyn\System.Reflection.Metadata.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\roslyn\vbc.exe
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\roslyn\VBCSCompiler.exe
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\roslyn\VBCSCompiler.exe.config
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\Bootcamp20.Client.dll.config
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\Bootcamp20.Client.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\Bootcamp20.Client.pdb
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\Antlr3.Runtime.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\Bootcamp20.API.DataAccess.exe
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\Microsoft.Web.Infrastructure.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\Newtonsoft.Json.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\System.Web.Helpers.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\System.Web.Mvc.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\System.Web.Optimization.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\System.Web.Razor.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\System.Web.WebPages.Deployment.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\System.Web.WebPages.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\System.Web.WebPages.Razor.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\WebGrease.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\EntityFramework.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\Bootcamp20.API.DataAccess.pdb
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\System.Web.Helpers.xml
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\System.Web.Mvc.xml
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\System.Web.Optimization.xml
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\System.Web.Razor.xml
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\System.Web.WebPages.xml
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\System.Web.WebPages.Deployment.xml
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\System.Web.WebPages.Razor.xml
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\Antlr3.Runtime.pdb
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\Newtonsoft.Json.xml
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\bin\EntityFramework.xml
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\obj\Debug\Bootcamp20.Client.csprojResolveAssemblyReference.cache
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\obj\Debug\Bootcamp20.Client.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.Client\obj\Debug\Bootcamp20.Client.pdb

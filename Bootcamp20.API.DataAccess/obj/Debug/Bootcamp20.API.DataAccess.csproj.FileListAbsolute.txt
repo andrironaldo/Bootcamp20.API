@@ -8,3 +8,13 @@ C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.DataAccess\obj\Debug\Bootcamp20.API.DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.DataAccess\obj\Debug\Bootcamp20.API.DataAccess.exe
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.DataAccess\obj\Debug\Bootcamp20.API.DataAccess.pdb
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.DataAccess\obj\Debug\Bootcamp20.API.DataAccess.csprojResolveAssemblyReference.cache
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.DataAccess\obj\Debug\Bootcamp20.API.DataAccess.exe
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.DataAccess\obj\Debug\Bootcamp20.API.DataAccess.pdb
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.DataAccess\bin\Debug\Bootcamp20.API.DataAccess.exe.config
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.DataAccess\bin\Debug\Bootcamp20.API.DataAccess.exe
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.DataAccess\bin\Debug\Bootcamp20.API.DataAccess.pdb
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.DataAccess\bin\Debug\EntityFramework.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.DataAccess\bin\Debug\EntityFramework.xml
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
