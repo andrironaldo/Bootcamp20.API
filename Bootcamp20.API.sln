@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bootcamp20.API", "Bootcamp20.API\Bootcamp20.API.csproj", "{31568AF6-58B5-43A8-B186-85B6F6735148}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bootcamp20.API.BussinessLogic", "Bootcamp20.API.BussinessLogic\Bootcamp20.API.BussinessLogic.csproj", "{387380EC-8C04-41F4-881E-7068217618B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bootcamp20.API.Common", "Bootcamp20.API.Common\Bootcamp20.API.Common.csproj", "{023E355C-8352-4C8C-8B1E-66A878EBA571}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bootcamp20.API.Core", "Bootcamp20.API.Core\Bootcamp20.API.Core.csproj", "{675A2BBA-D53C-4A04-AFE2-25798E0C2852}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bootcamp20.API.DataAccess", "Bootcamp20.API.DataAccess\Bootcamp20.API.DataAccess.csproj", "{AE64F028-E7B5-4976-A25F-5574B5CC0569}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bootcamp20.Client", "Bootcamp20.Client\Bootcamp20.Client.csproj", "{9C4C579F-D20B-4BB2-B027-0DF3057BAF35}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31568AF6-58B5-43A8-B186-85B6F6735148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31568AF6-58B5-43A8-B186-85B6F6735148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31568AF6-58B5-43A8-B186-85B6F6735148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31568AF6-58B5-43A8-B186-85B6F6735148}.Release|Any CPU.Build.0 = Release|Any CPU
+		{387380EC-8C04-41F4-881E-7068217618B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{387380EC-8C04-41F4-881E-7068217618B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{387380EC-8C04-41F4-881E-7068217618B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{387380EC-8C04-41F4-881E-7068217618B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{023E355C-8352-4C8C-8B1E-66A878EBA571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{023E355C-8352-4C8C-8B1E-66A878EBA571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{023E355C-8352-4C8C-8B1E-66A878EBA571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{023E355C-8352-4C8C-8B1E-66A878EBA571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{675A2BBA-D53C-4A04-AFE2-25798E0C2852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{675A2BBA-D53C-4A04-AFE2-25798E0C2852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{675A2BBA-D53C-4A04-AFE2-25798E0C2852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{675A2BBA-D53C-4A04-AFE2-25798E0C2852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE64F028-E7B5-4976-A25F-5574B5CC0569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE64F028-E7B5-4976-A25F-5574B5CC0569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE64F028-E7B5-4976-A25F-5574B5CC0569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE64F028-E7B5-4976-A25F-5574B5CC0569}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C4C579F-D20B-4BB2-B027-0DF3057BAF35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C4C579F-D20B-4BB2-B027-0DF3057BAF35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C4C579F-D20B-4BB2-B027-0DF3057BAF35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C4C579F-D20B-4BB2-B027-0DF3057BAF35}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

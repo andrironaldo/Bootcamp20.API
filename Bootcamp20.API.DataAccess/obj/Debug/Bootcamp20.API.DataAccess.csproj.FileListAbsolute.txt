@@ -1,0 +1,10 @@
+C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.DataAccess\bin\Debug\Bootcamp20.API.DataAccess.exe.config
+C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.DataAccess\bin\Debug\Bootcamp20.API.DataAccess.exe
+C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.DataAccess\bin\Debug\Bootcamp20.API.DataAccess.pdb
+C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.DataAccess\obj\Debug\Bootcamp20.API.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.DataAccess\obj\Debug\Bootcamp20.API.DataAccess.exe
+C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.DataAccess\obj\Debug\Bootcamp20.API.DataAccess.pdb
