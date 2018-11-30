@@ -27,6 +27,7 @@ namespace Bootcamp20.API.DataAccess.Models
         public Item(ItemParam itemparam)
         {
             this.Name = itemparam.Name;
+            this.Supplier = itemparam.Supplier;
             this.CreateDate = DateTimeOffset.Now.LocalDateTime;
         }
         public void Update(ItemParam itemparam)

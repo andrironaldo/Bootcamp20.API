@@ -18,7 +18,10 @@ namespace Bootcamp20.API
             // it is NOT necessary to register your controllers
             
             container.RegisterType<ISuplierService, SupplierService>();
+            container.RegisterType<IItemService, ItemService>();
+
             container.RegisterType<ISupplierRepository, SupplierRepository>();
+            container.RegisterType<IItemRepository, ItemRepository>();
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
