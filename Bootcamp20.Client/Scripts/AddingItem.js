@@ -48,8 +48,8 @@ function tampil() {
 
 function cari() {
     $.ajax({
-        type: 'get',
-        url: 'http://localhost:4937/api/Items/?name=' + $('#cari').val(),
+        type: "get",
+        url: "http://localhost:4937/api/Items/?jns=" + $('#jns').val() + "&&name=" + $('#cari').val(),
         dataType: 'JSON',
         success: function (data) {
             var html = '';
@@ -59,6 +59,7 @@ function cari() {
                 html += '<tr>' +
                         '<td>' + k + '</td>' +
                         '<td>' + data[i].Name + '</td>' +
+                        '<td>' + data[i].Supplier_Name + '</td>' +
                         '<td>' + data[i].IsDelete + '</td>' +
                         '<td><a onclick="return getById(' + data[i].Id + ')">Edit</a> | <a onclick="return deleting(' + data[i].Id + ')">Delete</a></td>' +
                         '</tr>';

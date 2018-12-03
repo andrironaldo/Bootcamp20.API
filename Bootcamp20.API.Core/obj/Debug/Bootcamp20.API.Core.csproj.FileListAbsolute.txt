@@ -5,6 +5,5 @@ C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.Core\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.Core\bin\Debug\EntityFramework.xml
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.Core\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.Core\obj\Debug\Bootcamp20.API.Core.csprojResolveAssemblyReference.cache
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.Core\obj\Debug\Bootcamp20.API.Core.exe
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.Core\obj\Debug\Bootcamp20.API.Core.pdb
