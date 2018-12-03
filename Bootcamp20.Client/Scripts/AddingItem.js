@@ -34,6 +34,7 @@ function tampil() {
                         '<td>' + k + '</td>' +
                         '<td>' + data[i].Name + '</td>' +
                         '<td>' + data[i].Supplier_Name + '</td>' +
+                        '<td>' + data[i].CreateDate + '</td>' + //nambahin ini
                         '<td>' + data[i].IsDelete + '</td>' +
                         '<td><a onclick="return getById(' + data[i].Id + ')">Edit</a> | <a onclick="return deleting(' + data[i].Id + ')">Delete</a></td>' +
                         '</tr>';
@@ -60,6 +61,7 @@ function cari() {
                         '<td>' + k + '</td>' +
                         '<td>' + data[i].Name + '</td>' +
                         '<td>' + data[i].IsDelete + '</td>' +
+                        '<td>' + data[i].CreateDate + '</td>' + //nambahin ini
                         '<td><a onclick="return getById(' + data[i].Id + ')">Edit</a> | <a onclick="return deleting(' + data[i].Id + ')">Delete</a></td>' +
                         '</tr>';
             }
