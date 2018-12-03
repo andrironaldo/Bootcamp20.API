@@ -11,7 +11,7 @@ namespace Bootcamp20.API.Common.Repository
     public interface IItemRepository
     {
         List<Item> Get();
-        List<Item> GetName(string name);
+        List<Item> GetName(ItemParam _itemparam);
         Item Get(int? id);
         bool Insert(ItemParam _itemparam);
         bool Update(ItemParam _itemparam);

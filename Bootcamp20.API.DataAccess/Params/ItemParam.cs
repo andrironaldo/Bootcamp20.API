@@ -18,6 +18,7 @@ namespace Bootcamp20.API.DataAccess.Params
         public Supplier Supplier { get; set; } 
         public int Supplier_Id { get; set; }
         public string Supplier_Name { get; set; }
+        public int jenis_cari { get; set; }
         public ItemParam() { }
         public ItemParam(Item item)
         {
