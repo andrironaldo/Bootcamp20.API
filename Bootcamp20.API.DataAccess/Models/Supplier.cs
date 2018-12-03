@@ -27,7 +27,6 @@ namespace Bootcamp20.API.DataAccess.Models
         public Nullable<System.DateTime> UpdateDate { get; set; }
         public Nullable<System.DateTime> DeleteDate { get; set; }
         public Nullable<bool> IsDelete { get; set; }
-        
         public Supplier(SupplierParam supplierparam)
         {
             this.Name = supplierparam.Name;

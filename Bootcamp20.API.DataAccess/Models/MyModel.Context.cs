@@ -25,7 +25,7 @@ namespace Bootcamp20.API.DataAccess.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<Item> Items { get; set; }
+        public virtual DbSet<Supplier> Suppliers { get; set; }
     }
 }

@@ -17,22 +17,29 @@ namespace Bootcamp20.API.DataAccess.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public Nullable<decimal> Price { get; set; }
+        public Nullable<int> Stock { get; set; }
         public Nullable<System.DateTime> CreateDate { get; set; }
         public Nullable<System.DateTime> UpdateDate { get; set; }
         public Nullable<System.DateTime> DeleteDate { get; set; }
         public Nullable<bool> IsDelete { get; set; }
-        public Nullable<int> Supplier_Id { get; set; }        
+        public Nullable<int> Supplier_Id { get; set; }
+    
         public virtual Supplier Supplier { get; set; }
         public Item() { }
         public Item(ItemParam itemparam)
         {
             this.Name = itemparam.Name;
+            this.Stock = itemparam.Stock;
+            this.Price = itemparam.Price;
             this.Supplier = itemparam.Supplier;
             this.CreateDate = DateTimeOffset.Now.LocalDateTime;
         }
         public void Update(ItemParam itemparam)
         {
             this.Name = itemparam.Name;
+            this.Stock = itemparam.Stock;
+            this.Price = itemparam.Price;
             this.Supplier = itemparam.Supplier;
             this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
         }

@@ -33,6 +33,8 @@ function tampil() {
                 html += '<tr>' +
                         '<td>' + k + '</td>' +
                         '<td>' + data[i].Name + '</td>' +
+                        '<td>' + data[i].Price + '</td>' +
+                        '<td>' + data[i].Stock + '</td>' +
                         '<td>' + data[i].CreateDate + '</td>' +
                         '<td>' + data[i].Supplier_Name + '</td>' +
                         '<td>' + data[i].IsDelete + '</td>' +
@@ -60,6 +62,8 @@ function cari() {
                 html += '<tr>' +
                         '<td>' + k + '</td>' +
                         '<td>' + data[i].Name + '</td>' +
+                        '<td>' + data[i].Price + '</td>' +
+                        '<td>' + data[i].Stock + '</td>' +
                         '<td>' + data[i].CreateDate + '</td>' +
                         '<td>' + data[i].Supplier_Name + '</td>' +
                         '<td>' + data[i].IsDelete + '</td>' +
@@ -106,6 +110,8 @@ function getById(id) {
             });
 
             $('#Name').val(item.Name);
+            $('#Stock').val(item.Stock);
+            $('#Price').val(item.Price);
             $('#NameOld').val(item.Name);
             $('#Id').val(item.Id);
             $('#myModal').modal('show');
@@ -150,15 +156,17 @@ function Edit() {
     var item = new Object();
     item.id = $('#Id').val();
     item.name = $('#Name').val();
+    item.stock = $('#Stock').val();
+    item.price = $('#Price').val();
     item.supplier_id = $('#combosuppliers').val();
     if (item.name == "") {
         swal("Invalid", "Harap Mengisi Form", "warning");
         return false;
     }
-    else if (item.name == $('#NameOld').val()) {
-        swal("Invalid", "Harap Data Tidak Boleh Sama", "warning");
-        return false;
-    }
+    //else if (item.name == $('#NameOld').val()) {
+    //    swal("Invalid", "Harap Data Tidak Boleh Sama", "warning");
+    //    return false;
+    //}
     else {
         $.ajax({
             url: 'http://localhost:4937/api/Items/' + item.id,
@@ -215,6 +223,8 @@ function deleting(id) {
 $('#Save').click(function () {
     var supplier = new Object();
     supplier.name = $('#Name').val();
+    supplier.stock = $('#Stock').val();
+    supplier.price = $('#Price').val();
     supplier.supplier_id = $('#combosuppliers').val();
     if (supplier.name == "") {
         swal("Invalid", "Harap Mengisi Form", "warning");

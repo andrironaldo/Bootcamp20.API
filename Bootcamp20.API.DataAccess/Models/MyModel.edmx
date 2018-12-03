@@ -5,19 +5,21 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="Bootcamp20.APIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Item">
+        <EntityType Name="Items">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Stock" Type="int" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
           <Property Name="DeleteDate" Type="datetime" />
           <Property Name="IsDelete" Type="bit" />
           <Property Name="Supplier_Id" Type="int" />
         </EntityType>
-        <EntityType Name="Supplier">
+        <EntityType Name="Suppliers">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -28,46 +30,34 @@
           <Property Name="DeleteDate" Type="datetime" />
           <Property Name="IsDelete" Type="bit" />
         </EntityType>
-        <Association Name="Foreign_Supplier">
-          <End Role="Supplier" Type="Self.Supplier" Multiplicity="0..1" />
-          <End Role="Item" Type="Self.Item" Multiplicity="*" />
+        <Association Name="FK_Foreign_Supplier">
+          <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="0..1" />
+          <End Role="Items" Type="Self.Items" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Supplier">
+            <Principal Role="Suppliers">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="Item">
+            <Dependent Role="Items">
               <PropertyRef Name="Supplier_Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="Bootcamp20APIModelStoreContainer">
-          <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="Foreign_Supplier" Association="Self.Foreign_Supplier">
-            <End Role="Supplier" EntitySet="Supplier" />
-            <End Role="Item" EntitySet="Item" />
+          <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Foreign_Supplier" Association="Self.FK_Foreign_Supplier">
+            <End Role="Suppliers" EntitySet="Suppliers" />
+            <End Role="Items" EntitySet="Items" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Bootcamp20.APIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Supplier">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="CreateDate" Type="DateTime" Precision="3" />
-          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
-          <Property Name="DeleteDate" Type="DateTime" Precision="3" />
-          <Property Name="IsDelete" Type="Boolean" />
-          <NavigationProperty Name="Items" Relationship="Bootcamp20.APIModel.Foreign_Supplier" FromRole="Supplier" ToRole="Item" />
-        </EntityType>
         <EntityContainer Name="MyContext" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
           <EntitySet Name="Items" EntityType="Bootcamp20.APIModel.Item" />
-          <AssociationSet Name="Foreign_Supplier" Association="Bootcamp20.APIModel.Foreign_Supplier">
+          <EntitySet Name="Suppliers" EntityType="Bootcamp20.APIModel.Supplier" />
+          <AssociationSet Name="FK_Foreign_Supplier" Association="Bootcamp20.APIModel.FK_Foreign_Supplier">
             <End Role="Supplier" EntitySet="Suppliers" />
             <End Role="Item" EntitySet="Items" />
           </AssociationSet>
@@ -78,14 +68,28 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Stock" Type="Int32" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
           <Property Name="DeleteDate" Type="DateTime" Precision="3" />
           <Property Name="IsDelete" Type="Boolean" />
           <Property Name="Supplier_Id" Type="Int32" />
-          <NavigationProperty Name="Supplier" Relationship="Bootcamp20.APIModel.Foreign_Supplier" FromRole="Item" ToRole="Supplier" />
+          <NavigationProperty Name="Supplier" Relationship="Bootcamp20.APIModel.FK_Foreign_Supplier" FromRole="Item" ToRole="Supplier" />
         </EntityType>
-        <Association Name="Foreign_Supplier">
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+          <Property Name="DeleteDate" Type="DateTime" Precision="3" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <NavigationProperty Name="Items" Relationship="Bootcamp20.APIModel.FK_Foreign_Supplier" FromRole="Supplier" ToRole="Item" />
+        </EntityType>
+        <Association Name="FK_Foreign_Supplier">
           <End Type="Bootcamp20.APIModel.Supplier" Role="Supplier" Multiplicity="0..1" />
           <End Type="Bootcamp20.APIModel.Item" Role="Item" Multiplicity="*" />
           <ReferentialConstraint>
@@ -103,22 +107,24 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="Bootcamp20APIModelStoreContainer" CdmEntityContainer="MyContext">
-          <EntitySetMapping Name="Suppliers">
-            <EntityTypeMapping TypeName="Bootcamp20.APIModel.Supplier">
-              <MappingFragment StoreEntitySet="Supplier">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
-                <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+          <EntitySetMapping Name="Items">
+            <EntityTypeMapping TypeName="Bootcamp20.APIModel.Item">
+              <MappingFragment StoreEntitySet="Items">
+                <ScalarProperty Name="Supplier_Id" ColumnName="Supplier_Id" />
                 <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Items">
-            <EntityTypeMapping TypeName="Bootcamp20.APIModel.Item">
-              <MappingFragment StoreEntitySet="Item">
-                <ScalarProperty Name="Supplier_Id" ColumnName="Supplier_Id" />
+          <EntitySetMapping Name="Suppliers">
+            <EntityTypeMapping TypeName="Bootcamp20.APIModel.Supplier">
+              <MappingFragment StoreEntitySet="Suppliers">
                 <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
                 <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
                 <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />

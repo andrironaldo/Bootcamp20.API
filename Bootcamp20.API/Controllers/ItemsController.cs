@@ -30,6 +30,8 @@ namespace Bootcamp20.API.Controllers
             {
                 Id = x.Id,
                 Name = x.Name.ToString(),
+                Stock = Convert.ToInt16(x.Stock),
+                Price = Convert.ToDecimal(x.Price),
                 CreateDate = Convert.ToDateTime(x.CreateDate),
                 Supplier_Name =x.Supplier.Name,
                 IsDelete = Convert.ToBoolean(x.IsDelete)
@@ -47,7 +49,9 @@ namespace Bootcamp20.API.Controllers
             {
                 Id = x.Id,
                 Name = x.Name,
-                CreateDate=Convert.ToDateTime(x.CreateDate),
+                Stock = Convert.ToInt16(x.Stock),
+                Price = Convert.ToDecimal(x.Price),
+                CreateDate =Convert.ToDateTime(x.CreateDate),
                 Supplier_Name = x.Supplier.Name,
                 IsDelete = Convert.ToBoolean(x.IsDelete)
             });
