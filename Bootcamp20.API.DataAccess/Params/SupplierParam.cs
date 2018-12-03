@@ -15,6 +15,7 @@ namespace Bootcamp20.API.DataAccess.Params
         public DateTime UpdateDate { get; set; }
         public DateTime DeleteDate { get; set; }
         public bool IsDelete { get; set; }
+        public int jenis_cari { get; set; }
         public SupplierParam() { }
         public SupplierParam(Supplier supplier)
         {

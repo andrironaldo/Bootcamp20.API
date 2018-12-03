@@ -26,9 +26,9 @@ namespace Bootcamp20.API.BussinessLogic.Interface.Master
         {
             return _isupplierrepository.Get();
         }
-        public List<Supplier> GetName(string name)
+        public List<Supplier> GetName(SupplierParam _supplierparam)
         {
-            return _isupplierrepository.GetName(name);
+            return _isupplierrepository.GetName(_supplierparam);
         }
 
         public Supplier Get(int? id)

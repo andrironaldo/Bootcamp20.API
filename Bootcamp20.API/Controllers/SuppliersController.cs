@@ -32,6 +32,7 @@ namespace Bootcamp20.API.Controllers
             IEnumerable<SupplierParam> list_param = _Supplier.Get().Select(x => new SupplierParam
             {
                 Id=x.Id,
+                CreateDate = Convert.ToDateTime(x.CreateDate),
                 Name = x.Name.ToString(),
                 IsDelete=Convert.ToBoolean(x.IsDelete)
             });
@@ -44,12 +45,16 @@ namespace Bootcamp20.API.Controllers
         }
 
         [HttpGet]
-        public System.Web.Http.Results.JsonResult<IEnumerable<SupplierParam>> Get(string name)
+        public System.Web.Http.Results.JsonResult<IEnumerable<SupplierParam>> Get(int jns, string name)
         {
             //string name=null;
-            IEnumerable<SupplierParam> list_param = _Supplier.GetName(name).Select(x => new SupplierParam
+            SupplierParam pencarian = new SupplierParam();
+            pencarian.Name = name;
+            pencarian.jenis_cari = jns;
+            IEnumerable<SupplierParam> list_param = _Supplier.GetName(pencarian).Select(x => new SupplierParam
             {
                 Id = x.Id,
+                CreateDate=Convert.ToDateTime(x.CreateDate),
                 Name = x.Name.ToString(),
                 IsDelete = Convert.ToBoolean(x.IsDelete)
             });

@@ -30,7 +30,8 @@ namespace Bootcamp20.API.Controllers
             {
                 Id = x.Id,
                 Name = x.Name.ToString(),
-                Supplier_Name=x.Supplier.Name,
+                CreateDate = Convert.ToDateTime(x.CreateDate),
+                Supplier_Name =x.Supplier.Name,
                 IsDelete = Convert.ToBoolean(x.IsDelete)
             });
             return Json(list_param);
@@ -42,32 +43,11 @@ namespace Bootcamp20.API.Controllers
             ItemParam pencarian = new ItemParam();
             pencarian.Name = name;
             pencarian.jenis_cari = jns;
-            if (jns == 1)
-            {
-                IEnumerable<ItemParam> list_paramm = _Item.GetName(pencarian).Select(x => new ItemParam
-                {
-                    Id = x.Id,
-                    Name = x.Name.ToString(),
-                    Supplier_Id = x.Supplier.Id,
-                    IsDelete = Convert.ToBoolean(x.IsDelete)
-                });
-                return Json(list_paramm);
-            }
-            else if (jns == 2)
-            {
-                IEnumerable<ItemParam> list_paramm = _Item.GetName(pencarian).Select(x => new ItemParam
-                {
-                    Id = x.Id,
-                    Name = x.Name,
-                    Supplier_Name = x.Supplier.Name,
-                    IsDelete = Convert.ToBoolean(x.IsDelete)
-                });
-                return Json(list_paramm);
-            }
-            IEnumerable<ItemParam> list_param = _Item.Get().Select(x => new ItemParam
+            IEnumerable<ItemParam> list_param = _Item.GetName(pencarian).Select(x => new ItemParam
             {
                 Id = x.Id,
-                Name = x.Name.ToString(),
+                Name = x.Name,
+                CreateDate=Convert.ToDateTime(x.CreateDate),
                 Supplier_Name = x.Supplier.Name,
                 IsDelete = Convert.ToBoolean(x.IsDelete)
             });
