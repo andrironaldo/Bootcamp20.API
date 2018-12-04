@@ -52,9 +52,6 @@ C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API\bin\Unity.RegistrationByConvention.pdb
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API\bin\Unity.ServiceLocation.pdb
 <<<<<<< HEAD
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API\bin\System.Web.Cors.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API\bin\System.Web.Http.Cors.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API\bin\System.Web.Http.Cors.xml
 D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API\obj\Debug\Bootcamp20.API.csprojResolveAssemblyReference.cache
 D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API\obj\Debug\Bootcamp20.API.dll
 D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API\obj\Debug\Bootcamp20.API.pdb

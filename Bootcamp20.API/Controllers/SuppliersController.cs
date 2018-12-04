@@ -33,7 +33,7 @@ namespace Bootcamp20.API.Controllers
             {
                 Id=x.Id,
                 Name = x.Name.ToString(),
-                IsDelete=Convert.ToBoolean(x.IsDelete)
+                IsDelete = Convert.ToBoolean(x.IsDelete)
             });
             //var Sup = _Supplier.Get();
             //var data = _Supplier.Get();
@@ -44,21 +44,20 @@ namespace Bootcamp20.API.Controllers
         }
 
         [HttpGet]
-        public System.Web.Http.Results.JsonResult<IEnumerable<SupplierParam>> Get(string name)
+        public System.Web.Http.Results.JsonResult<IEnumerable<SupplierParam>> Get(int jns, string name)
         {
-            //string name=null;
-            IEnumerable<SupplierParam> list_param = _Supplier.GetName(name).Select(x => new SupplierParam
-            {
-                Id = x.Id,
-                Name = x.Name.ToString(),
-                IsDelete = Convert.ToBoolean(x.IsDelete)
-            });
-            //var Sup = _Supplier.Get();
-            //var data = _Supplier.Get();
-            //var serializer = new JavaScriptSerializer();
-            //var c = serializer.Serialize(data);
-            //object a;
-            return Json(list_param);
+            SupplierParam pencarian = new SupplierParam();
+            pencarian.Name = name;
+            pencarian.jenis_cari = jns;
+            
+                IEnumerable<SupplierParam> list_param = _Supplier.GetName(pencarian).Select(x => new SupplierParam
+                {
+                    Id = x.Id,
+                    Name = x.Name.ToString(),
+                    IsDelete = Convert.ToBoolean(x.IsDelete)
+                });
+                return Json(list_param);
+            
         }
 
         // GET: api/Suppliers/5

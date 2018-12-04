@@ -10,9 +10,6 @@ C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.Common\obj\Debug\Bootcamp20.API.Common.csprojResolveAssemblyReference.cache
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.Common\obj\Debug\Bootcamp20.API.Common.exe
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.Common\obj\Debug\Bootcamp20.API.Common.pdb
-D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.Common\obj\Debug\Bootcamp20.API.Common.csprojResolveAssemblyReference.cache
-D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.Common\obj\Debug\Bootcamp20.API.Common.exe
-D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.Common\obj\Debug\Bootcamp20.API.Common.pdb
 D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.Common\bin\Debug\Bootcamp20.API.Common.exe.config
 D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.Common\bin\Debug\Bootcamp20.API.Common.exe
 D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.Common\bin\Debug\Bootcamp20.API.Common.pdb
@@ -22,3 +19,6 @@ D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.Common\bin\Debug\Entity
 D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.Common\bin\Debug\Bootcamp20.API.DataAccess.pdb
 D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.Common\bin\Debug\EntityFramework.xml
 D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.Common\bin\Debug\EntityFramework.SqlServer.xml
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.Common\obj\Debug\Bootcamp20.API.Common.csprojResolveAssemblyReference.cache
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.Common\obj\Debug\Bootcamp20.API.Common.exe
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.Common\obj\Debug\Bootcamp20.API.Common.pdb

@@ -33,9 +33,21 @@ namespace Bootcamp20.API.Common.Repository.Master
         {
             return _context.Suppliers.ToList();
         }
-        public List<Supplier> GetName(string name)
+        public List<Supplier> GetName(SupplierParam _supplierparam)
         {
-            return _context.Suppliers.Where(x => x.Name.Contains(name)).ToList();
+            if(_supplierparam.jenis_cari == 1)
+            {
+                return _context.Suppliers.Where(x => x.Name.Contains(_supplierparam.Name)).ToList();
+                
+            }
+            //else if(_supplierparam.jenis_cari == 2)
+            //{
+            //    return _context.Suppliers.Where(x => x.Name.Contains(_supplierparam.Name)).ToList();
+            //}
+            else
+            {
+                return _context.Suppliers.Where(x => x.IsDelete == false).ToList();
+            }
         }
 
         public Supplier Get(int? id)

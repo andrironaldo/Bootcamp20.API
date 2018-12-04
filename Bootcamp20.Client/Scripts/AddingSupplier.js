@@ -33,8 +33,7 @@ function tampil() {
                 html += '<tr>' +
                         '<td>' + k + '</td>' +
                         '<td>' + data[i].Name + '</td>' +
-                        '<td>' + data[i].CreateDate + '</td>' + //nambahin ini
-                        '<td>' + data[i].IsDelete + '</td>' +
+                        //'<td>' + data[i].IsDelete + '</td>' +
                         '<td><a onclick="return getById(' + data[i].Id + ')">Edit</a> | <a onclick="return deleting(' + data[i].Id + ')">Delete</a></td>' +
                         '</tr>';
             }                            
@@ -49,7 +48,7 @@ function tampil() {
 function cari() {
     $.ajax({
         type: 'get',
-        url: 'http://localhost:4937/api/Suppliers/?name=' + $('#cari').val(),
+        url: 'http://localhost:4937/api/Suppliers/?jns=' + $('#jns').val() + "&&name=" + $('#cari').val(),
         dataType: 'JSON',
         success: function (data) {
             var html = '';
@@ -59,7 +58,7 @@ function cari() {
                 html += '<tr>' +
                         '<td>' + k + '</td>' +
                         '<td>' + data[i].Name + '</td>' +
-                        '<td>' + data[i].IsDelete + '</td>' +
+                        //'<td>' + data[i].IsDelete + '</td>' +
                         '<td><a onclick="return getById(' + data[i].Id + ')">Edit</a> | <a onclick="return deleting(' + data[i].Id + ')">Delete</a></td>' +
                         '</tr>';
             }

@@ -5,7 +5,6 @@
 
 <h2>Index</h2>
 
-<p>
     <form>
         <select name="jns" id="jns">
             <option value="1" selected>Items</option>
@@ -16,7 +15,7 @@
     </form>
     <button onclick="cari()" class="btn pull-left hidden-sm-down btn-info"><i class="mdi mdi-plus-circle"></i> Search</button>
     <button data-toggle="modal" onclick="savetampil()" data-target="#myModal" class="btn pull-right hidden-sm-down btn-success"><i class="mdi mdi-plus-circle"></i> Create</button>
-</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -27,11 +26,13 @@
                 Nama Item
             </th>
             <th>
-                Nama Supplier
+                Harga Item
             </th>
-            @*nambahin ini*@
-            <th> 
-                Exp Date
+            <th>
+                Stock Item
+            </th>
+            <th>
+                Nama Supplier
             </th>
             <th>
                 Keterangan Delete
@@ -62,6 +63,16 @@
                         <label for="Name">Name</label>
                         <input type="text" class="form-control" id="Name" placeholder="Name" />
                         <input type="hidden" class="form-control" id="NameOld" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Price">Price</label>
+                        <input type="text" class="form-control" id="Price" placeholder="Price" />
+                        <input type="hidden" class="form-control" id="PriceOld" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Stock">Stock</label>
+                        <input type="text" class="form-control" id="Stock" placeholder="Stock" />
+                        <input type="hidden" class="form-control" id="StockOld" />
                     </div>
                     <div class="form-group">
                         <div id="Combobox"></div>

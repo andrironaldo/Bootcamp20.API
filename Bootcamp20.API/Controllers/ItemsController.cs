@@ -30,6 +30,8 @@ namespace Bootcamp20.API.Controllers
             {
                 Id = x.Id,
                 Name = x.Name.ToString(),
+                Price = Convert.ToDecimal(x.Price),
+                Stock = Convert.ToInt16(x.Stock),
                 Supplier_Name=x.Supplier.Name,
                 IsDelete = Convert.ToBoolean(x.IsDelete)
             });
@@ -42,36 +44,38 @@ namespace Bootcamp20.API.Controllers
             ItemParam pencarian = new ItemParam();
             pencarian.Name = name;
             pencarian.jenis_cari = jns;
-            if (jns == 1)
-            {
+            //if (jns == 1)
+            //{
                 IEnumerable<ItemParam> list_paramm = _Item.GetName(pencarian).Select(x => new ItemParam
                 {
                     Id = x.Id,
                     Name = x.Name.ToString(),
+                    Price = Convert.ToDecimal(x.Price),
+                    Stock = Convert.ToInt16(x.Stock),
                     Supplier_Id = x.Supplier.Id,
                     IsDelete = Convert.ToBoolean(x.IsDelete)
                 });
                 return Json(list_paramm);
-            }
-            else if (jns == 2)
-            {
-                IEnumerable<ItemParam> list_paramm = _Item.GetName(pencarian).Select(x => new ItemParam
-                {
-                    Id = x.Id,
-                    Name = x.Name,
-                    Supplier_Name = x.Supplier.Name,
-                    IsDelete = Convert.ToBoolean(x.IsDelete)
-                });
-                return Json(list_paramm);
-            }
-            IEnumerable<ItemParam> list_param = _Item.Get().Select(x => new ItemParam
-            {
-                Id = x.Id,
-                Name = x.Name.ToString(),
-                Supplier_Name = x.Supplier.Name,
-                IsDelete = Convert.ToBoolean(x.IsDelete)
-            });
-            return Json(list_param);
+            //}
+            //else if (jns == 2)
+            //{
+            //    IEnumerable<ItemParam> list_paramm = _Item.GetName(pencarian).Select(x => new ItemParam
+            //    {
+            //        Id = x.Id,
+            //        Name = x.Name,
+            //        Supplier_Name = x.Supplier.Name,
+            //        //IsDelete = Convert.ToBoolean(x.IsDelete)
+            //    });
+            //    return Json(list_paramm);
+            //}
+            //IEnumerable<ItemParam> list_param = _Item.Get().Select(x => new ItemParam
+            //{
+            //    Id = x.Id,
+            //    Name = x.Name.ToString(),
+            //    Supplier_Name = x.Supplier.Name,
+            //    //IsDelete = Convert.ToBoolean(x.IsDelete)
+            //});
+            //return Json(list_param);
         }
 
         // GET: api/Suppliers/5

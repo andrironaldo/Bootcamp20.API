@@ -5,14 +5,16 @@
 
 <h2>Index</h2>
 
-<p>
     <form>
+        <select name="jns" id="jns">
+            <option value="1" selected>Supplier</option>
+            <option value="3">Hire</option>
+        </select>
         <input type="text" placeholder="Cari Nama Supplier" id="cari"/>
     </form>
     <button onclick="cari()" class="btn pull-left hidden-sm-down btn-info"><i class="mdi mdi-plus-circle"></i> Search</button>
     <button data-toggle="modal" onclick="savetampil()" data-target="#myModal" class="btn pull-right hidden-sm-down btn-success"><i class="mdi mdi-plus-circle"></i> Create</button>
-    @*@Html.ActionLink("Create New", "Create", null,)*@
-</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -22,10 +24,6 @@
             <th>
                 @*@Html.DisplayNameFor(model => model.Name)*@
                 Nama Supplier
-            </th>
-            @*nambahin ini*@
-            <th>
-                Exp Date
             </th>
             <th>
                 Keterangan Hapus

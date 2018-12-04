@@ -11,7 +11,7 @@ namespace Bootcamp20.API.Common.Repository
     public interface ISupplierRepository
     {
         List<Supplier> Get();
-        List<Supplier> GetName(string name);
+        List<Supplier> GetName(SupplierParam _supplierparam);
         Supplier Get(int? id);
         bool Insert(SupplierParam _supplierparam);
         bool Update(SupplierParam _supplierparam);

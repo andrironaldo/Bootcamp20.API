@@ -12,9 +12,6 @@ C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.BussinessLogic\obj\Debug\Bootcamp20.API.BussinessLogic.csprojResolveAssemblyReference.cache
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.BussinessLogic\obj\Debug\Bootcamp20.API.BussinessLogic.exe
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Bootcamp20.API\Bootcamp20.API.BussinessLogic\obj\Debug\Bootcamp20.API.BussinessLogic.pdb
-D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.BussinessLogic\obj\Debug\Bootcamp20.API.BussinessLogic.csprojResolveAssemblyReference.cache
-D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.BussinessLogic\obj\Debug\Bootcamp20.API.BussinessLogic.exe
-D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.BussinessLogic\obj\Debug\Bootcamp20.API.BussinessLogic.pdb
 D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.BussinessLogic\bin\Debug\Bootcamp20.API.BussinessLogic.exe.config
 D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.BussinessLogic\bin\Debug\Bootcamp20.API.BussinessLogic.exe
 D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.BussinessLogic\bin\Debug\Bootcamp20.API.BussinessLogic.pdb
@@ -26,3 +23,6 @@ D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.BussinessLogic\bin\Debu
 D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.BussinessLogic\bin\Debug\Bootcamp20.API.DataAccess.pdb
 D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.BussinessLogic\bin\Debug\EntityFramework.xml
 D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.BussinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.BussinessLogic\obj\Debug\Bootcamp20.API.BussinessLogic.csprojResolveAssemblyReference.cache
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.BussinessLogic\obj\Debug\Bootcamp20.API.BussinessLogic.exe
+D:\NISA\BOOTCAMP20\GIT\API\Bootcamp20.API\Bootcamp20.API.BussinessLogic\obj\Debug\Bootcamp20.API.BussinessLogic.pdb
