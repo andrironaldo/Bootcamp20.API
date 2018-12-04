@@ -15,8 +15,13 @@
     </form>
     <button onclick="cari()" class="btn pull-left hidden-sm-down btn-info"><i class="mdi mdi-plus-circle"></i> Search</button>
     <button data-toggle="modal" onclick="savetampil()" data-target="#myModal" class="btn pull-right hidden-sm-down btn-success"><i class="mdi mdi-plus-circle"></i> Create</button>
+<<<<<<< HEAD
 
 <table class="table">
+=======
+</p>
+<table class="table table-bordered table-striped" id="datatables">
+>>>>>>> 7a346a0f828613457040538acfb8ddc335483136
     <thead>
         <tr>
             <th>
@@ -94,6 +99,13 @@
 
 @section Scripts{
     <script src="~/Content/sweetalert/sweetalert.min.js"></script>
+
+    <script src="~/Content/datatables/jquery.dataTables.min.js"></script>
+    <link href="~/Content/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+
+    @*<script src="~/Content/datatables/media/js/dataTables.bootstrap.min.js"></script>
+    <link href="~/Content/datatables/media/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css">*@
+
     <link href="~/Content/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
     <script src="~/Scripts/AddingItem.js"></script>
     @Scripts.Render("~/bundles/jqueryval")

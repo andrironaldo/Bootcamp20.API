@@ -1,30 +1,16 @@
-﻿//$(document).ready(function () {
-//    $.ajax({
-//        type: 'get',
-//        url: 'http://localhost:4937/api/Suppliers',
-//        async: false,
-//        dataType: 'json',
-//        success: function (data) {
-//            var html = '';
-//            var i, k;
-//            for (i = 0; i < data.length; i++) {
-//                k = i + 1;
-//                html += '<tr>' +
-//                        '<td>' + k + '</td>' +
-//                        '<td>' + data[i].Name + '</td>' +
-//                        '<td>' + k + '</td>' +
-//                        '</tr>';
-//            }
-//            $('#LoadData').html(html);
-//        }
-//    });
-//});
-tampil();
+﻿$(document).ready(function () {
+    $('#datatables').DataTable({
+        "ajax":tampil()
+    });
+    tampil();
+});
+
 function tampil() {
     debugger;
     $.ajax({
         type: 'get',
         url: 'http://localhost:4937/api/Suppliers/',
+        async: false,
         dataType: 'JSON',
         success: function (data) {
             var html = '';
