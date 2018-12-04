@@ -46,18 +46,8 @@ warning 6002: The table/view 'Bootcamp20.API.dbo.Item' does not have a primary k
         </Association>
         <EntityContainer Name="Bootcamp20APIModelStoreContainer">
           <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Item" EntityType="Self.Item" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Item].[Id] AS [Id], 
-    [Item].[Name] AS [Name], 
-    [Item].[Price] AS [Price], 
-    [Item].[Stock] AS [Stock], 
-    [Item].[CreateDate] AS [CreateDate], 
-    [Item].[UpdateDate] AS [UpdateDate], 
-    [Item].[DeleteDate] AS [DeleteDate], 
-    [Item].[IsDelete] AS [IsDelete], 
-    [Item].[Supplier_Id] AS [Supplier_Id]
-    FROM [dbo].[Item] AS [Item]</DefiningQuery>
+          <EntitySet Name="Item" EntityType="Self.Item" store:Type="Tables" Schema="dbo">
+            
           </EntitySet>
           <AssociationSet Name="FK_Item_Supplier" Association="Self.FK_Item_Supplier">
             <End Role="Supplier" EntitySet="Supplier" />

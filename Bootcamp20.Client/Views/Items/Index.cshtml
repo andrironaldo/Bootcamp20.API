@@ -7,7 +7,8 @@
 
     <form>
         <select name="jns" id="jns">
-            <option value="1" selected>Item Name</option>
+            <option value="0" selected>Search By</option>
+            <option value="1">Item Name</option>
             <option value="2">Supplier Name</option>
             <option value="3">Hire Month</option>
         </select>
@@ -15,20 +16,18 @@
     </form>
     <button onclick="cari()" class="btn pull-left hidden-sm-down btn-info"><i class="mdi mdi-plus-circle"></i> Search</button>
     <button data-toggle="modal" onclick="savetampil()" data-target="#myModal" class="btn pull-right hidden-sm-down btn-success"><i class="mdi mdi-plus-circle"></i> Create</button>
-<<<<<<< HEAD
 
 <table class="table">
-=======
 </p>
-<table class="table table-bordered table-striped" id="datatables">
->>>>>>> 7a346a0f828613457040538acfb8ddc335483136
-    <thead>
+    @*tambahin border dan strip, kasih id untuk di jsnya*@
+<table class="table table-bordered table-striped" id="datatables"> 
+    <thead style="background-color:cadetblue; color:white;">
         <tr>
             <th>
                 Nomor
             </th>
             <th>
-                Nama Item
+                Item Name
             </th>
             <th>
                 Price
@@ -37,13 +36,13 @@
                 Stock
             </th>
             <th>
-                Tanggal Beli
+                Buys Date
             </th>
             <th>
-                Nama Supplier
+                Supplier Name
             </th>
             <th>
-                Keterangan Delete
+                Is Delete
             </th>
             <th>
                 Action
@@ -75,12 +74,12 @@
                     <div class="form-group">
                         <label for="Name">Price</label>
                         <input type="text" class="form-control" id="Price" placeholder="Price" />
-                        <input type="hidden" class="form-control" id="NameOld" />
+                        <input type="hidden" class="form-control" id="PriceOld" />
                     </div>
                     <div class="form-group">
                         <label for="Name">Stock</label>
                         <input type="text" class="form-control" id="Stock" placeholder="Stock" />
-                        <input type="hidden" class="form-control" id="NameOld" />
+                        <input type="hidden" class="form-control" id="StockOld" />
                     </div>
                     <div class="form-group">
                         <div id="Combobox"></div>
@@ -100,6 +99,7 @@
 @section Scripts{
     <script src="~/Content/sweetalert/sweetalert.min.js"></script>
 
+    @*include jsnya*@
     <script src="~/Content/datatables/jquery.dataTables.min.js"></script>
     <link href="~/Content/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
 

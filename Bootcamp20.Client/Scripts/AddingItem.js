@@ -130,7 +130,10 @@ function savetampil() {
         }
     });
 
-
+    //supaya kosong modalnya
+    $('#Price').val('');
+    $('#Stock').val('');
+    $('#Supplier').val('');
     $('#Name').val('');
     $('#Id').val('');
     $('#Update').hide();

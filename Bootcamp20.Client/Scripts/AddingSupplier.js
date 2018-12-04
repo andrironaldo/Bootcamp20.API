@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿//untuk data table
+$(document).ready(function () {
     $('#datatables').DataTable({
         "ajax":tampil()
     });
@@ -10,7 +11,7 @@ function tampil() {
     $.ajax({
         type: 'get',
         url: 'http://localhost:4937/api/Suppliers/',
-        async: false,
+        async: false, //penting untuk sort dan filter di data table
         dataType: 'JSON',
         success: function (data) {
             var html = '';

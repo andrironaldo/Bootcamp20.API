@@ -43,5 +43,6 @@ namespace Bootcamp20.API.DataAccess.Models
             this.Supplier = itemparam.Supplier;
             this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
         }
+
     }
 }
