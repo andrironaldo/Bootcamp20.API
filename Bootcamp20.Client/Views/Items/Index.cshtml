@@ -3,19 +3,19 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
+<h2>Item</h2>
     <form>
-        <select name="jns" id="jns">
+        <select name="jns" id="jns" style="margin:8px" class="form-control col-md-3">
             <option value="0" selected>Search By</option>
             <option value="1">Item Name</option>
             <option value="2">Supplier Name</option>
             <option value="3">Hire Month</option>
         </select>
-        <input type="text" placeholder="Cari Nama Item" id="cari" />
+        <input type="text" placeholder="Search" id="cari" style="margin:8px" class="form-control col-md-3"/>
     </form>
-    <button onclick="cari()" class="btn pull-left hidden-sm-down btn-info"><i class="mdi mdi-plus-circle"></i> Search</button>
-    <button data-toggle="modal" onclick="savetampil()" data-target="#myModal" class="btn pull-right hidden-sm-down btn-success"><i class="mdi mdi-plus-circle"></i> Create</button>
+    <button onclick="cari()" class="btn pull-left hidden-sm-down btn-info" style="margin:8px" class="btn btn-primary col-md-1"> Search</button>
+@*<i class="mdi mdi-plus-circle"></i>*@
+    <button data-toggle="modal" onclick="savetampil()" style="margin:8px" class="btn btn-primary col-md-1" data-target="#myModal" class="btn pull-right hidden-sm-down btn-success"> Create</button>
 
 <table class="table">
 </p>
@@ -55,7 +55,7 @@
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" style="background-color:lavender;">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">x</button>
                 <h4 class="modal-title" id="myModalLabel">Item Form</h4>
