@@ -11,8 +11,8 @@ namespace Bootcamp20.API.DataAccess.Params
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public decimal Price { get; set; } //
-        public int Stock { get; set; } //
+        public int Stock { get; set; }
+        public decimal Price { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime UpdateDate { get; set; }
         public DateTime DeleteDate { get; set; }
@@ -26,8 +26,8 @@ namespace Bootcamp20.API.DataAccess.Params
         {
             this.Id = item.Id;
             this.Name = item.Name;
-            this.Price = item.Price; 
-            this.Stock = item.Stock; 
+            this.Price = Convert.ToDecimal(item.Price);
+            this.Stock = Convert.ToInt16(item.Stock);
             this.CreateDate = Convert.ToDateTime(item.CreateDate);
             this.UpdateDate = Convert.ToDateTime(item.UpdateDate);
             this.IsDelete = Convert.ToBoolean(item.IsDelete);

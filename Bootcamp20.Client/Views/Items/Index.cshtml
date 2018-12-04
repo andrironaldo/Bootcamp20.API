@@ -7,9 +7,9 @@
 
     <form>
         <select name="jns" id="jns">
-            <option value="1" selected>Items</option>
-            <option value="2">Supplier</option>
-            <option value="3">Hire</option>
+            <option value="1" selected>Item Name</option>
+            <option value="2">Supplier Name</option>
+            <option value="3">Hire Month</option>
         </select>
         <input type="text" placeholder="Cari Nama Item" id="cari" />
     </form>
@@ -26,10 +26,13 @@
                 Nama Item
             </th>
             <th>
-                Harga Item
+                Price
             </th>
             <th>
-                Stock Item
+                Stock
+            </th>
+            <th>
+                Tanggal Beli
             </th>
             <th>
                 Nama Supplier
@@ -65,14 +68,14 @@
                         <input type="hidden" class="form-control" id="NameOld" />
                     </div>
                     <div class="form-group">
-                        <label for="Price">Price</label>
+                        <label for="Name">Price</label>
                         <input type="text" class="form-control" id="Price" placeholder="Price" />
-                        <input type="hidden" class="form-control" id="PriceOld" />
+                        <input type="hidden" class="form-control" id="NameOld" />
                     </div>
                     <div class="form-group">
-                        <label for="Stock">Stock</label>
+                        <label for="Name">Stock</label>
                         <input type="text" class="form-control" id="Stock" placeholder="Stock" />
-                        <input type="hidden" class="form-control" id="StockOld" />
+                        <input type="hidden" class="form-control" id="NameOld" />
                     </div>
                     <div class="form-group">
                         <div id="Combobox"></div>

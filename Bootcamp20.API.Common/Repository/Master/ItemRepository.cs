@@ -46,7 +46,8 @@ namespace Bootcamp20.API.Common.Repository.Master
             }
             else if (_itemparam.jenis_cari == 3)
             {
-                return _context.Items.Include("Supplier").Where(x => x.Name.Contains(_itemparam.Name)).ToList();
+                int c=Convert.ToInt16(_itemparam.Name);
+                return _context.Items.Include("Supplier").Where(x => x.CreateDate.Value.Month==c).ToList();
             }
             else
             {

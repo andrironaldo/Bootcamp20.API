@@ -7,8 +7,8 @@
 
     <form>
         <select name="jns" id="jns">
-            <option value="1" selected>Supplier</option>
-            <option value="3">Hire</option>
+            <option value="1" selected>Supplier Name</option>
+            <option value="2">Hire Month</option>
         </select>
         <input type="text" placeholder="Cari Nama Supplier" id="cari"/>
     </form>
@@ -24,6 +24,9 @@
             <th>
                 @*@Html.DisplayNameFor(model => model.Name)*@
                 Nama Supplier
+            </th>
+            <th>
+                Hire Date
             </th>
             <th>
                 Keterangan Hapus

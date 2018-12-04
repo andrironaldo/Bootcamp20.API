@@ -32,32 +32,28 @@ namespace Bootcamp20.API.Controllers
             IEnumerable<SupplierParam> list_param = _Supplier.Get().Select(x => new SupplierParam
             {
                 Id=x.Id,
+                CreateDate = Convert.ToDateTime(x.CreateDate),
                 Name = x.Name.ToString(),
                 IsDelete = Convert.ToBoolean(x.IsDelete)
             });
-            //var Sup = _Supplier.Get();
-            //var data = _Supplier.Get();
-            //var serializer = new JavaScriptSerializer();
-            //var c = serializer.Serialize(data);
-            //object a;
             return Json(list_param);
         }
 
         [HttpGet]
         public System.Web.Http.Results.JsonResult<IEnumerable<SupplierParam>> Get(int jns, string name)
-        {
+        {            
+            //string name=null;
             SupplierParam pencarian = new SupplierParam();
             pencarian.Name = name;
             pencarian.jenis_cari = jns;
-            
-                IEnumerable<SupplierParam> list_param = _Supplier.GetName(pencarian).Select(x => new SupplierParam
-                {
-                    Id = x.Id,
-                    Name = x.Name.ToString(),
-                    IsDelete = Convert.ToBoolean(x.IsDelete)
-                });
-                return Json(list_param);
-            
+            IEnumerable<SupplierParam> list_param = _Supplier.GetName(pencarian).Select(x => new SupplierParam
+            {
+                Id = x.Id,
+                CreateDate=Convert.ToDateTime(x.CreateDate),
+                Name = x.Name.ToString(),
+                IsDelete = Convert.ToBoolean(x.IsDelete)
+            });
+            return Json(list_param);
         }
 
         // GET: api/Suppliers/5
@@ -67,9 +63,7 @@ namespace Bootcamp20.API.Controllers
             SupplierParam supplierparam = new SupplierParam(_Supplier.Get(id));
             return supplierparam;
         }
-
         
-
         // POST: api/Suppliers
         [HttpPost]
         public void Post(SupplierParam supplierparam)

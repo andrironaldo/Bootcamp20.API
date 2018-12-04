@@ -21,6 +21,7 @@
 //});
 tampil();
 function tampil() {
+    debugger;
     $.ajax({
         type: 'get',
         url: 'http://localhost:4937/api/Suppliers/',
@@ -33,10 +34,11 @@ function tampil() {
                 html += '<tr>' +
                         '<td>' + k + '</td>' +
                         '<td>' + data[i].Name + '</td>' +
-                        //'<td>' + data[i].IsDelete + '</td>' +
+                        '<td>' + data[i].CreateDate + '</td>' +
+                        '<td>' + data[i].IsDelete + '</td>' +
                         '<td><a onclick="return getById(' + data[i].Id + ')">Edit</a> | <a onclick="return deleting(' + data[i].Id + ')">Delete</a></td>' +
                         '</tr>';
-            }                            
+            }
             $('#LoadData').html(html);
         },
         error: function (jqXHR, textStatus, errorThrown) {
@@ -48,7 +50,7 @@ function tampil() {
 function cari() {
     $.ajax({
         type: 'get',
-        url: 'http://localhost:4937/api/Suppliers/?jns=' + $('#jns').val() + "&&name=" + $('#cari').val(),
+        url: "http://localhost:4937/api/Suppliers/?jns=" + $('#jns').val() + "&&name=" + $('#cari').val(),
         dataType: 'JSON',
         success: function (data) {
             var html = '';
@@ -58,7 +60,8 @@ function cari() {
                 html += '<tr>' +
                         '<td>' + k + '</td>' +
                         '<td>' + data[i].Name + '</td>' +
-                        //'<td>' + data[i].IsDelete + '</td>' +
+                        '<td>' + data[i].CreateDate + '</td>' +
+                        '<td>' + data[i].IsDelete + '</td>' +
                         '<td><a onclick="return getById(' + data[i].Id + ')">Edit</a> | <a onclick="return deleting(' + data[i].Id + ')">Delete</a></td>' +
                         '</tr>';
             }
@@ -74,9 +77,9 @@ function getById(id) {
     $.ajax({
         url: 'http://localhost:4937/api/Suppliers/' + id,
         type: 'get',
-        dataType:'json',
+        dataType: 'json',
         success: function (data) {
-            tampil();            
+            tampil();
             $('#Name').val(data.Name);
             $('#NameOld').val(data.Name);
             $('#Id').val(data.Id);
@@ -109,12 +112,12 @@ function Edit() {
         swal("Invalid", "Harap Data Tidak Boleh Sama", "warning");
         return false;
     }
-    else{
+    else {
         $.ajax({
             url: 'http://localhost:4937/api/Suppliers/' + supplier.id,
             type: 'PUT',
             data: supplier,
-            dataType:'json',
+            dataType: 'json',
             success: function (data) {
                 tampil();
                 $('#myModal').modal('hide');
@@ -169,7 +172,7 @@ $('#Save').click(function () {
         swal("Invalid", "Harap Mengisi Form", "warning");
         return false;
     }
-    else{
+    else {
         $.ajax({
             url: 'http://localhost:4937/api/Suppliers',
             type: 'POST',

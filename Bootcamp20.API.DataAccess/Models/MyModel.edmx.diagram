@@ -5,9 +5,9 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="19e8e55b446643a284e682e3a77084ce" Name="Diagram1">
-        <EntityTypeShape EntityType="Bootcamp20.APIModel.Supplier" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Bootcamp20.APIModel.Item" Width="1.5" PointX="3.625" PointY="3.25" />
-        <AssociationConnector Association="Bootcamp20.APIModel.Foreign_Supplier" />
+        <EntityTypeShape EntityType="Bootcamp20.APIModel.Supplier" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="Bootcamp20.APIModel.Item" Width="1.5" PointX="3" PointY="1" />
+        <AssociationConnector Association="Bootcamp20.APIModel.FK_Item_Supplier" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

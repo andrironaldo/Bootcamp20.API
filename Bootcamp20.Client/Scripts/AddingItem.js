@@ -35,6 +35,7 @@ function tampil() {
                         '<td>' + data[i].Name + '</td>' +
                         '<td>' + data[i].Price + '</td>' +
                         '<td>' + data[i].Stock + '</td>' +
+                        '<td>' + data[i].CreateDate + '</td>' +
                         '<td>' + data[i].Supplier_Name + '</td>' +
                         '<td>' + data[i].IsDelete + '</td>' +
                         '<td><a onclick="return getById(' + data[i].Id + ')">Edit</a> | <a onclick="return deleting(' + data[i].Id + ')">Delete</a></td>' +
@@ -61,6 +62,9 @@ function cari() {
                 html += '<tr>' +
                         '<td>' + k + '</td>' +
                         '<td>' + data[i].Name + '</td>' +
+                        '<td>' + data[i].Price + '</td>' +
+                        '<td>' + data[i].Stock + '</td>' +
+                        '<td>' + data[i].CreateDate + '</td>' +
                         '<td>' + data[i].Supplier_Name + '</td>' +
                         '<td>' + data[i].IsDelete + '</td>' +
                         '<td><a onclick="return getById(' + data[i].Id + ')">Edit</a> | <a onclick="return deleting(' + data[i].Id + ')">Delete</a></td>' +
@@ -94,7 +98,7 @@ function getById(id) {
                         if (data[i].Id == item.Supplier_Id) {
                             val = 'selected';
                         }
-                        html += '<option '+val+' value="' + data[i].Id + '">' + data[i].Name + '</option>';
+                        html += '<option ' + val + ' value="' + data[i].Id + '">' + data[i].Name + '</option>';
                         val = '';
                     }
                     html += '</select>';
@@ -106,11 +110,9 @@ function getById(id) {
             });
 
             $('#Name').val(item.Name);
-            $('#NameOld').val(item.Name);
-            $('#Price').val(item.Price);
-            $('#PriceOld').val(item.Price);
             $('#Stock').val(item.Stock);
-            $('#StockOld').val(item.Stock);
+            $('#Price').val(item.Price);
+            $('#NameOld').val(item.Name);
             $('#Id').val(item.Id);
             $('#myModal').modal('show');
             $('#Update').show();
@@ -130,7 +132,7 @@ function savetampil() {
         success: function (data) {
             var html = '';
             html += '<select name="combosuppliers" id="combosuppliers" class="form-control">';
-                        
+
             for (i = 0; i < data.length; i++) {
                 html += '<option value="' + data[i].Id + '">' + data[i].Name + '</option>';
             }
@@ -144,8 +146,6 @@ function savetampil() {
 
 
     $('#Name').val('');
-    $('#Price').val('');
-    $('#Stock').val('');
     $('#Id').val('');
     $('#Update').hide();
     $('#Save').show();
@@ -156,17 +156,17 @@ function Edit() {
     var item = new Object();
     item.id = $('#Id').val();
     item.name = $('#Name').val();
-    item.price = $('#Price').val();
     item.stock = $('#Stock').val();
+    item.price = $('#Price').val();
     item.supplier_id = $('#combosuppliers').val();
     if (item.name == "") {
         swal("Invalid", "Harap Mengisi Form", "warning");
         return false;
     }
-    else if (item.name == $('#NameOld').val()) {
-        swal("Invalid", "Harap Data Tidak Boleh Sama", "warning");
-        return false;
-    }
+        //else if (item.name == $('#NameOld').val()) {
+        //    swal("Invalid", "Harap Data Tidak Boleh Sama", "warning");
+        //    return false;
+        //}
     else {
         $.ajax({
             url: 'http://localhost:4937/api/Items/' + item.id,
@@ -177,8 +177,6 @@ function Edit() {
                 tampil();
                 $('#myModal').modal('hide');
                 $('#Name').val('');
-                $('#Price').val('');
-                $('#Stock').val('');
                 $('#Id').val('');
             },
             error: function (jqXHR, textStatus, errorThrown) {
@@ -223,21 +221,12 @@ function deleting(id) {
 }
 
 $('#Save').click(function () {
-    var item = new Object();
-    item.name = $('#Name').val();
-    item.price = $('#Price').val();
-    item.stock = $('#Stock').val();
-    item.supplier_id = $('#combosuppliers').val();
-    if (item.name == "") {
-        swal("Invalid", "Harap Mengisi Form", "warning");
-        return false;
-    } else if (item.price == "") {
-        swal("Invalid", "Harap Mengisi Form", "warning");
-        return false;
-    } else if (item.stock == "") {
-        swal("Invalid", "Harap Mengisi Form", "warning");
-        return false;
-    } else if (item.supplier_id == null) {
+    var supplier = new Object();
+    supplier.name = $('#Name').val();
+    supplier.stock = $('#Stock').val();
+    supplier.price = $('#Price').val();
+    supplier.supplier_id = $('#combosuppliers').val();
+    if (supplier.name == "") {
         swal("Invalid", "Harap Mengisi Form", "warning");
         return false;
     }
@@ -246,7 +235,7 @@ $('#Save').click(function () {
             url: 'http://localhost:4937/api/Items',
             type: 'POST',
             dataType: 'json',
-            data: item,
+            data: supplier,
             success: function (data) {
                 tampil();
                 $('#myModal').modal('hide');

@@ -27,7 +27,9 @@ namespace Bootcamp20.API.DataAccess.Models
         public Nullable<System.DateTime> UpdateDate { get; set; }
         public Nullable<System.DateTime> DeleteDate { get; set; }
         public Nullable<bool> IsDelete { get; set; }
-        
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Item> Items { get; set; }
         public Supplier(SupplierParam supplierparam)
         {
             this.Name = supplierparam.Name;
@@ -38,8 +40,5 @@ namespace Bootcamp20.API.DataAccess.Models
             this.Name = supplierparam.Name;
             this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
         }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Item> Items { get; set; }
     }
 }
